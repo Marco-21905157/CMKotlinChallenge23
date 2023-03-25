@@ -13,7 +13,8 @@ class Data(date: Date) {
     }
 
     override fun toString(): String {
-        return "${ localDate.dayOfMonth }-${ localDate.month }-${ localDate.year }"
+        return "${ localDate.dayOfMonth.toString().padStart(2, '0') }-" +
+                "${ localDate.monthValue.toString().padStart(2, '0') }-${ localDate.year }"
     }
 
     fun anosAteHoje(): Int {
