@@ -5,7 +5,7 @@ import java.util.*
 
 open class Veiculo(var identificador: String): Movimentavel {
     var posicao: Posicao = Posicao(0, 0)
-    lateinit var dataDeAquisicao: Date
+    var dataDeAquisicao: Date? = null
 
     open fun requerCarta() : Boolean {
         return false
