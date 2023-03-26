@@ -43,6 +43,7 @@ class Pessoa(var nome: String, var dataDeNascimento: Date) : Movimentavel{
                 throw PessoaSemCartaException("$nome não tem carta para conduzir o veículo indicado")
             }
             veiculo.moverPara(x, y)
+            moverPara(x, y)
         }
         catch (_: VeiculoNaoEncontradoException){}
     }
